@@ -1,0 +1,53 @@
+Порядок вычитывания .backend файлов.
+Системная шина:
+
+1) /usr/share/alterator/backends/
+2) /usr/share/alterator/backends/system/
+3) /etc/alterator/backends/
+4) /etc/alterator/backends/system/
+
+Сессионная шина:
+
+1) /usr/share/alterator/backends/user/
+2) /etc/alterator/backends/user/
+
+Интерфейсы:
+
+full-interface: ru.basealt.alterator.altmobile
+short-interface: altmobile
+
+.backend файл
+
+
+[Alterator Entry]
+Type = Backend
+Module = executor
+Name = mobile_auth
+Interface = ru.basealt.alterator.altmobile
+action_id = ru.basealt.alterator.altmobile1
+
+[In_domain]
+execute = /usr/sbin/system-auth {param}
+stdout_strings = enabled
+stderr_strings = enabled
+action_id = In_domain
+
+
+ru.basealt.alterator.altmobile.policy
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+"-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+"http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+  <action id="ru.basealt.alterator.altmobile">
+    <description>Alterator Authentication dialogue</description>
+    <message>ru.basealt.alterator.altmobile requires authentication.</message>
+    <defaults>
+      <allow_any>auth_admin</allow_any>
+      <allow_inactive>auth_admin</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+  </action>
+</policyconfig>
+
