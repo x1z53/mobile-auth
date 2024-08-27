@@ -1,0 +1,12 @@
+[Alterator Entry]
+Type = Backend
+Module = executor
+Name = mobile_auth
+Interface = ru.basealt.alterator.authentication_mobile
+action_id = ru.basealt.alterator.authentication_mobile1
+
+[In_domain]
+execute = /usr/sbin/system-auth {param}
+stdout_strings = enabled
+stderr_strings = enabled
+action_id = In_domain

@@ -1,9 +1,0 @@
-[Alterator Entry]
-Type = Backend
-Module = Executor
-Interface = mobile-auth1
-action = ru.basealt.alterator.mobile-auth
-
-[Info]
-execute = /usr/sbin/system-auth
-action_id = Info
