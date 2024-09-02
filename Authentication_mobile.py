@@ -1,46 +1,42 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3 
+# -*- coding: utf-8 -*- 
 
+import threading
 import gi
+import dbus
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk
+from gi.repository import Gtk, GLib
 
 class AdminDialog(Gtk.Dialog):
     def __init__(self, parent):
         super().__init__(title="Данные администратора", transient_for=parent, modal=True)
 
-        self.set_default_size(200, 100)
+        self.set_default_size(250, 150)
 
-        # Основное содержимое окна
         box = self.get_content_area()
 
-        # Поле для имени администратора
         self.username_entry = Gtk.Entry()
         self.username_entry.set_text("administrator")
         self.username_entry.set_placeholder_text("Имя администратора")
         box.add(Gtk.Label(label="Имя администратора:"))
         box.add(self.username_entry)
 
-        # Поле для пароля
         self.password_entry = Gtk.Entry()
-        self.password_entry.set_visibility(False)  # Скрытие пароля
+        self.password_entry.set_visibility(False)  
         self.password_entry.set_placeholder_text("Пароль")
         box.add(Gtk.Label(label="Пароль:"))
         box.add(self.password_entry)
 
-        # Чекбокс для показа/скрытия пароля
         self.show_password_check = Gtk.CheckButton(label="Показать пароль")
         self.show_password_check.connect("toggled", self.on_show_password_toggled)
         box.add(self.show_password_check)
 
-        # Добавляем кнопки OK и Cancel
         self.add_button("OK", Gtk.ResponseType.OK)
         self.add_button("Cancel", Gtk.ResponseType.CANCEL)
 
         self.show_all()
 
     def on_show_password_toggled(self, button):
-        # Переключение видимости пароля
         is_visible = button.get_active()
         self.password_entry.set_visibility(is_visible)
 
@@ -49,35 +45,30 @@ class AdminDialog(Gtk.Dialog):
 
 class SystemAuthApp(Gtk.Window):
     def __init__(self):
-        super().__init__(title="Настройки системы")
+        super().__init__(title="Аутентификация")
 
         self.set_border_width(10)
-        self.set_default_size(400, 200)
+        self.set_default_size(300, 150)
 
         grid = Gtk.Grid(column_spacing=10, row_spacing=10)
         self.add(grid)
 
-        # Поле ввода домена
         self.domain_entry = Gtk.Entry()
         grid.attach(Gtk.Label(label="Домен:"), 0, 0, 1, 1)
         grid.attach(self.domain_entry, 1, 0, 2, 1)
 
-        # Поле ввода рабочей группы
         self.workgroup_entry = Gtk.Entry()
         grid.attach(Gtk.Label(label="Рабочая группа:"), 0, 1, 1, 1)
         grid.attach(self.workgroup_entry, 1, 1, 2, 1)
 
-        # Поле ввода имени компьютера
         self.computer_name_entry = Gtk.Entry()
         grid.attach(Gtk.Label(label="Имя компьютера:"), 0, 2, 1, 1)
         grid.attach(self.computer_name_entry, 1, 2, 2, 1)
 
-        # Кнопка для генерации команды
-        self.submit_button = Gtk.Button(label="Сгенерировать команду")
+        self.submit_button = Gtk.Button(label="Продолжить")
         self.submit_button.connect("clicked", self.on_submit)
         grid.attach(self.submit_button, 0, 3, 3, 1)
 
-        # Метка для отображения результата
         self.result_label = Gtk.Label()
         self.result_label.set_line_wrap(True)
         grid.attach(self.result_label, 0, 4, 3, 1)
@@ -97,15 +88,80 @@ class SystemAuthApp(Gtk.Window):
             dialog.destroy()
             return
 
-        # Открытие диалогового окна для ввода данных администратора
         admin_dialog = AdminDialog(self)
         response = admin_dialog.run()
 
         if response == Gtk.ResponseType.OK:
             admin_username, admin_password = admin_dialog.get_credentials()
-            command = f"system-auth write ad {domain} {computer_name} {workgroup} '{admin_username}' '{admin_password}'"
-            self.result_label.set_text(f"Сгенерированная команда:\n{command}")
+            command = f'write ad {domain} {computer_name} {workgroup} "{admin_username}" "{admin_password}"'
+
+            threading.Thread(target=self.call_dbus_method, args=(command,)).start()
+
         admin_dialog.destroy()
+
+    def call_dbus_method(self, command):
+        GLib.idle_add(self.show_spinner)
+
+        try:
+            bus = dbus.SystemBus()
+
+            proxy = bus.get_object('ru.basealt.alterator', '/ru/basealt/alterator/mobile_auth')
+            interface = dbus.Interface(proxy, dbus_interface='ru.basealt.alterator.authentication_mobile')
+
+            response = interface.In_domain(command, timeout=120)
+
+            stdout_output, stderr_output, return_code = response
+
+            if return_code == 0:
+                domain_name = self.domain_entry.get_text()
+                result_str = f"Добро пожаловать в {domain_name}"
+            elif return_code == 1:
+                error_message = "\n".join(stderr_output) if stderr_output else "Неизвестная ошибка"
+                result_str = f"Возникла следующая ошибка: {error_message}"
+            else:
+                result_str = "Произошла неизвестная ошибка"
+
+            GLib.idle_add(self.show_result_dialog, result_str)
+
+        except dbus.DBusException as e:
+            GLib.idle_add(self.show_result_dialog, f"Ошибка D-Bus: {str(e)}")
+
+        finally:
+            GLib.idle_add(self.hide_spinner)
+
+
+    def show_spinner(self):
+        self.spinner_window = Gtk.Window(title="Подождите...")
+        self.spinner_window.set_default_size(200, 100)
+        self.spinner_window.set_modal(True)
+
+        spinner = Gtk.Spinner()
+        spinner.set_size_request(50, 50)
+        spinner.start()
+
+        box = Gtk.Box(spacing=6)
+        box.set_orientation(Gtk.Orientation.VERTICAL)
+        box.pack_start(spinner, True, True, 0)
+
+        label = Gtk.Label(label="Выполняется операция...")
+        box.pack_start(label, True, True, 0)
+
+        self.spinner_window.add(box)
+        self.spinner_window.show_all()
+
+    def hide_spinner(self):
+        if self.spinner_window:
+            self.spinner_window.destroy()
+            self.spinner_window = None
+
+    def show_result_dialog(self, message):
+        dialog = Gtk.MessageDialog(
+            transient_for=self, flags=0, message_type=Gtk.MessageType.INFO,
+            buttons=Gtk.ButtonsType.OK, text="Результат выполнения"
+        )
+        dialog.format_secondary_text(str(message))  
+        dialog.run()
+        dialog.destroy()
 
 def main():
     app = SystemAuthApp()
