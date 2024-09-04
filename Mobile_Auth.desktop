@@ -3,3 +3,4 @@ Version=1.0
 Type=Application
 Name=Mobile_Auth
 Exec=/usr/bin/authentication_mobile.py
+Icon=/usr/share/icons/hicolor/242x242/apps/mobile_auth.svg

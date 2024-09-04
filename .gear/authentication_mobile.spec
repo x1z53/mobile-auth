@@ -1,5 +1,5 @@
 Name: authentication_mobile
-Version: 0.1.0
+Version: 0.1.1
 Release: alt1
 
 Summary: Alt Mobile domain input tool
@@ -40,16 +40,26 @@ mkdir -p %buildroot%_bindir/
 ln -s %python3_sitelibdir/%name/%{name}.py \
          %buildroot%_bindir/%{name}.py
 
+mkdir -p %buildroot%_datadir/applications/
+install -Dm644 Mobile_Auth.desktop %buildroot%_datadir/applications
+
+mkdir -p %buildroot%_iconsdir/hicolor/242x242/apps/
+install -Dm644 mobile_auth.svg %buildroot%_datadir/icons/hicolor/242x242/apps
 
 %files
 %python3_sitelibdir/%name/%name.py
 %_bindir/%{name}.py
 %_alterator_datadir/backends/system/%{name}.backend
 %_datadir/polkit-1/actions/ru.basealt.alterator.authentication_mobile1.policy
+%_desktopdir/Mobile_Auth.desktop
+%_iconsdir/hicolor/*/*/*.svg
 
 
 
 %changelog
+* Wed Sep 04 2024 Valentin Sokolov <sova@altlinux.org> 0.1.1-alt1
+- Added desktop icon
+
 * Wed Sep 04 2024 Valentin Sokolov <sova@altlinux.org> 0.1.0-alt1
 - Initial build for Sisyphus
 
