@@ -3,7 +3,7 @@
 "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
 "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
-  <action id="ru.basealt.alterator.authentication_mobile1">
+  <action id="ru.basealt.alterator.authentication-mobile1">
     <description>Alterator Authentication dialogue</description>
     <message>ru.basealt.alterator.altmobile1 requires authentication.</message>
     <defaults>
@@ -12,7 +12,7 @@
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
   </action>
-  <action id="ru.basealt.alterator.authentication_mobile1.In_domain">
+  <action id="ru.basealt.alterator.authentication-mobile1.In_domain">
     <description>Alterator Authentication dialogue</description>
     <message>ru.basealt.alterator.altmobile1.In_domain requires authentication.</message>
     <defaults>

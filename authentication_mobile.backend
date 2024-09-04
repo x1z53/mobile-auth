@@ -3,7 +3,7 @@ Type = Backend
 Module = executor
 Name = mobile_auth
 Interface = ru.basealt.alterator.authentication_mobile
-action_id = ru.basealt.alterator.authentication_mobile1
+action_id = ru.basealt.alterator.authentication-mobile1
 
 [In_domain]
 execute = /usr/sbin/system-auth {param}
