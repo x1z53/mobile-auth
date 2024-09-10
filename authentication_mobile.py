@@ -31,6 +31,9 @@ class AdminDialog(Gtk.Dialog):
         self.show_password_check.connect("toggled", self.on_show_password_toggled)
         box.add(self.show_password_check)
 
+        self.gpo_check = Gtk.CheckButton(label="Включить групповые политики")
+        box.add(self.gpo_check)
+
         self.add_button("OK", Gtk.ResponseType.OK)
         self.add_button("Cancel", Gtk.ResponseType.CANCEL)
 
@@ -41,7 +44,7 @@ class AdminDialog(Gtk.Dialog):
         self.password_entry.set_visibility(is_visible)
 
     def get_credentials(self):
-        return self.username_entry.get_text(), self.password_entry.get_text()
+        return self.username_entry.get_text(), self.password_entry.get_text(), self.gpo_check.get_active()
 
 class SystemAuthApp(Gtk.Window):
     def __init__(self):
@@ -92,8 +95,11 @@ class SystemAuthApp(Gtk.Window):
         response = admin_dialog.run()
 
         if response == Gtk.ResponseType.OK:
-            admin_username, admin_password = admin_dialog.get_credentials()
+            admin_username, admin_password, gpo_enabled = admin_dialog.get_credentials()
             command = f'write ad {domain} {computer_name} {workgroup} "{admin_username}" "{admin_password}"'
+
+            if gpo_enabled:
+                command += " --gpo"
 
             threading.Thread(target=self.call_dbus_method, args=(command,)).start()
 
