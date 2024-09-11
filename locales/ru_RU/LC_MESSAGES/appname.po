@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru-RU\n"
+
+msgid "Admin Data"
+msgstr "Данные администратора"
+
+msgid "Admin Name"
+msgstr "Имя администратора"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Show Password"
+msgstr "Показать пароль"
+
+msgid "Enable Group Policies"
+msgstr "Включить групповые политики"
+
+msgid "OK"
+msgstr "ОК"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Domain:"
+msgstr "Домен:"
+
+msgid "Workgroup:"
+msgstr "Рабочая группа:"
+
+msgid "Computer Name:"
+msgstr "Имя компьютера:"
+
+msgid "Submit"
+msgstr "Продолжить"
+
+msgid "Please wait..."
+msgstr "Пожалуйста, подождите..."
+
+msgid "Operation in progress..."
+msgstr "Выполняется операция..."
+
+msgid "Result"
+msgstr "Результат"
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Please fill in all fields."
+msgstr "Пожалуйста, заполните все поля."
+
+msgid "Welcome to "
+msgstr "Добро пожаловать в "
+
+msgid "The following error occurred: "
+msgstr "Возникла следующая ошибка: "
+
+msgid "An unknown error occurred"
+msgstr "Произошла неизвестная ошибка"
+
+msgid "D-Bus Error: "
+msgstr "Ошибка D-Bus: "

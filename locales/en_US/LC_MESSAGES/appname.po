@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en-US\n"
+
+msgid "Admin Data"
+msgstr "Admin Data"
+
+msgid "Admin Name"
+msgstr "Admin Name"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Show Password"
+msgstr "Show Password"
+
+msgid "Enable Group Policies"
+msgstr "Enable Group Policies"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Domain:"
+msgstr "Domain:"
+
+msgid "Workgroup:"
+msgstr "Workgroup:"
+
+msgid "Computer Name:"
+msgstr "Computer Name:"
+
+msgid "Submit"
+msgstr "Submit"
+
+msgid "Please wait..."
+msgstr "Please wait..."
+
+msgid "Operation in progress..."
+msgstr "Operation in progress..."
+
+msgid "Result"
+msgstr "Result"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Please fill in all fields."
+msgstr "Please fill in all fields."
+
+msgid "Welcome to "
+msgstr "Welcome to "
+
+msgid "The following error occurred: "
+msgstr "The following error occurred: "
+
+msgid "An unknown error occurred"
+msgstr "An unknown error occurred"
+
+msgid "D-Bus Error: "
+msgstr "D-Bus Error: "
