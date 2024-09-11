@@ -4,6 +4,7 @@
 import threading
 import gi
 import dbus
+import socket
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib
 
@@ -65,6 +66,8 @@ class SystemAuthApp(Gtk.Window):
         grid.attach(self.workgroup_entry, 1, 1, 2, 1)
 
         self.computer_name_entry = Gtk.Entry()
+        computer_name = socket.gethostname()
+        self.computer_name_entry.set_text(computer_name)
         grid.attach(Gtk.Label(label="Имя компьютера:"), 0, 2, 1, 1)
         grid.attach(self.computer_name_entry, 1, 2, 2, 1)
 
