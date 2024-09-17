@@ -21,6 +21,7 @@
 import os
 import sys
 import gi
+import locale
 import gettext
 
 from gi.repository import Gio
@@ -29,11 +30,11 @@ APP_ID = "@application_id@"
 LOCALE_DIR = "@localedir@"
 PKGDATA_DIR = "@pkgdatadir@"
 VERSION = "@version@"
+locale.bindtextdomain("mobile-auth", LOCALE_DIR)
+locale.textdomain("mobile-auth")
+gettext.install("mobile-auth", LOCALE_DIR)
 
 def main():
-    gettext.bindtextdomain(APP_ID, LOCALE_DIR)
-    gettext.textdomain(APP_ID)
-
     resource = Gio.resource_load(os.path.join(PKGDATA_DIR, "{}.gresource".format(APP_ID)))
     Gio.Resource._register(resource)
 

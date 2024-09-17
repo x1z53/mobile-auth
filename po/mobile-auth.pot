@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile-auth\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 15:45+0300\n"
+"POT-Creation-Date: 2024-09-17 20:02+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,10 @@ msgstr ""
 
 #: data/ui/admin-dialog.blp:72
 msgid "Authenticate"
+msgstr ""
+
+#: data/ui/window.blp:15 mobileauth/window.py:43
+msgid "Authentication"
 msgstr ""
 
 #: data/ui/window.blp:28
@@ -102,10 +106,6 @@ msgstr ""
 
 #: mobileauth/welcome_dialog.py:36
 msgid "Welcome to {}"
-msgstr ""
-
-#: mobileauth/window.py:43
-msgid "Authentication"
 msgstr ""
 
 #: mobileauth/window.py:73

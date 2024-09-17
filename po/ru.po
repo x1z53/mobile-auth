@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 15:45+0300\n"
+"POT-Creation-Date: 2024-09-17 20:02+0300\n"
 "Language: ru-RU\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,6 +40,10 @@ msgstr "Включить групповые политики"
 #: data/ui/admin-dialog.blp:72
 msgid "Authenticate"
 msgstr "Авторизоваться"
+
+#: data/ui/window.blp:15 mobileauth/window.py:43
+msgid "Authentication"
+msgstr "Авторизация"
 
 #: data/ui/window.blp:28
 msgid "Enter the domain details, and then enter the administrator credentials."
@@ -92,10 +96,6 @@ msgstr "Ок"
 #: mobileauth/welcome_dialog.py:36
 msgid "Welcome to {}"
 msgstr "Добро пожаловать в {}"
-
-#: mobileauth/window.py:43
-msgid "Authentication"
-msgstr "Авторизация"
 
 #: mobileauth/window.py:73
 msgid "Please fill in all fields."
