@@ -1,0 +1,94 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $MobileAuthWindow: Adw.ApplicationWindow {
+  default-width: 360;
+  default-height: 650;
+  width-request: 360;
+  height-request: 294;
+
+  Adw.ToastOverlay toast_overlay {
+    Adw.ToolbarView {
+      [top]
+      Adw.HeaderBar {
+        title-widget: Adw.WindowTitle {
+          title: "Authentication";
+        };
+
+        [end]
+        Button {
+          action-name: "win.about";
+          icon-name: "help-about-symbolic";
+        }
+      }
+
+      content: Adw.StatusPage {
+        icon-name: "io.guthub.SokolovValy.MobileAuth-symbolic";
+        title: _("Application for entering the device into the domain");
+        description: _("Enter the domain details, and then enter the administrator credentials.");
+
+        Adw.Clamp {
+          margin-bottom: 12;
+          margin-top: 12;
+          margin-start: 12;
+          margin-end: 12;
+          maximum-size: 500;
+
+          ListBox {
+            styles [
+              "boxed-list"
+            ]
+
+            selection-mode: none;
+
+            Adw.EntryRow domain_entry {
+              title: _("Domain");
+            }
+
+            Adw.EntryRow workgroup_entry {
+              title: _("Workgroup");
+            }
+
+            Adw.EntryRow host_name_entry {
+              title: _("Hostname");
+              tooltip-text: _("Reset value");
+
+              [suffix]
+              Button clear_host_name_button {
+                styles [
+                  "circular",
+                  "flat",
+                  "distructive-action"
+                ]
+
+                visible: false;
+                icon-name: "error-correct-symbolic";
+                valign: center;
+                halign: center;
+              }
+            }
+          }
+        }
+      };
+
+      [bottom]
+      Adw.Clamp {
+        margin-bottom: 12;
+        margin-top: 12;
+        margin-start: 12;
+        margin-end: 12;
+        maximum-size: 500;
+
+        Button submit_button {
+          styles [
+            "suggested-action",
+            "pill"
+          ]
+
+          halign: center;
+          label: _("Submit");
+        }
+      }
+    }
+  }
+}

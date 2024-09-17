@@ -1,0 +1,90 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $MobileAuthAdminDialog: Adw.Dialog {
+  Adw.ToastOverlay toast_overlay {
+    Stack main_stack {
+      StackPage {
+        name: "main";
+        child: Adw.ToolbarView {
+          [top]
+          Adw.HeaderBar {
+            title-widget: Adw.WindowTitle {
+              title: _("Administrator credentials");
+            };
+          }
+
+          content: Adw.Clamp {
+            margin-bottom: 12;
+            margin-top: 12;
+            margin-start: 12;
+            margin-end: 12;
+            maximum-size: 500;
+
+            ListBox {
+              styles [
+                "boxed-list"
+              ]
+
+              selection-mode: none;
+
+              Adw.EntryRow username_entry {
+                title: _("Username");
+                text: "administrator";
+              }
+
+              Adw.PasswordEntryRow password_entry {
+                title: _("Password");
+              }
+
+              Adw.ActionRow {
+                title: _("Enable Group Policies");
+                activatable: false;
+
+                [suffix]
+                Gtk.CheckButton gpo_checkbutton {
+                  styles [
+                    "selection-mode"
+                  ]
+
+                  halign: center;
+                  valign: center;
+                }
+              }
+            }
+          };
+
+          [bottom]
+          Adw.Clamp {
+            margin-bottom: 12;
+            margin-top: 12;
+            margin-start: 12;
+            margin-end: 12;
+            maximum-size: 500;
+
+            Button auth_button {
+              styles [
+                "suggested-action",
+                "pill"
+              ]
+
+              halign: center;
+              label: _("Authenticate");
+            }
+          }
+        };
+      }
+
+      StackPage {
+        name: "loading";
+        child: Gtk.Spinner {
+          spinning: true;
+          width-request: 32;
+          height-request: 32;
+          halign: center;
+          valign: center;
+        };
+      }
+    }
+  }
+}

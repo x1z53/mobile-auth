@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Mobile Auth
+Exec=mobile-auth %U
+Icon=io.guthub.SokolovValy.MobileAuth

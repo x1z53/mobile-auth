@@ -1,0 +1,8 @@
+data/io.guthub.SokolovValy.MobileAuth.desktop.in
+data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in
+data/ui/admin-dialog.blp
+data/ui/window.blp
+mobileauth/admin_dialog.py
+mobileauth/application.py
+mobileauth/welcome_dialog.py
+mobileauth/window.py
