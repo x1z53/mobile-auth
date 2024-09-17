@@ -6,7 +6,7 @@ i18n.merge_file(
   output: '@0@.desktop'.format(APPLICATION_ID),
   po_dir: join_paths(meson.project_source_root(), 'po'),
   install: true,
-  install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'applications')
+  install_dir: join_paths(DATA_DIR, 'applications')
 )
 
 desktop_file_validate = find_program('desktop-file-validate', required:false)
@@ -23,7 +23,7 @@ metainfo_file = i18n.merge_file(
   output: '@0@.metainfo.xml'.format(APPLICATION_ID),
   po_dir: join_paths(meson.project_source_root(), 'po'),
   install: true,
-  install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'metainfo')
+  install_dir: join_paths(DATA_DIR, 'metainfo')
 )
 
 appstreamcli = find_program('appstreamcli', required: false)
@@ -34,6 +34,14 @@ if (appstreamcli.found())
     workdir: meson.current_build_dir()
   )
 endif
+
+install_data('ru.basealt.alterator.authentication_mobile1.policy',
+  install_dir: join_paths(DATA_DIR, 'polkit-1/actions/')
+)
+
+install_data('authentication_mobile.backend',
+  install_dir: join_paths(DATA_DIR, 'alterator/backends/system/')
+)
 
 blueprints = custom_target('blueprints',
   input: files(

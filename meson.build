@@ -16,7 +16,8 @@ endif
 
 APPLICATION_ID = 'io.guthub.SokolovValy.MobileAuth'
 PYTHON_DIR = py_installation.get_path('purelib')
-PKGDATA_DIR = join_paths(get_option('prefix'), get_option('datadir'), APPLICATION_ID)
+DATA_DIR = join_paths(get_option('prefix'), get_option('datadir'))
+PKGDATA_DIR = join_paths(DATA_DIR, APPLICATION_ID)
 PKGLIB_DIR = join_paths(get_option('prefix'), get_option('libdir'), APPLICATION_ID)
 
 # Dependencies
@@ -36,7 +37,7 @@ install_subdir(
 bin_config = configuration_data()
 bin_config.set('application_id', APPLICATION_ID)
 bin_config.set('pkgdatadir', PKGDATA_DIR)
-bin_config.set('localedir', join_paths(get_option('prefix'), get_option('datadir'), 'locale'))
+bin_config.set('localedir', join_paths(DATA_DIR, 'locale'))
 bin_config.set('pythondir', PYTHON_DIR)
 bin_config.set('version', meson.project_version())
 
