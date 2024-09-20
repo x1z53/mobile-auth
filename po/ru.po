@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-17 20:02+0300\n"
+"Language: ru-RU\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/io.guthub.SokolovValy.MobileAuth.desktop.in:4
+#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:3
+#: mobileauth/application.py:46 mobileauth/window.py:137
+msgid "Mobile Auth"
+msgstr ""
+
+#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:18
+#: data/ui/window.blp:27
+msgid "Application for entering the device into the domain"
+msgstr "Приложение для авторизации в домене"
+
+#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:25
+msgid "Valentin Sokolov"
+msgstr "Valentin Sokolov"
+
+#: data/ui/admin-dialog.blp:13
+msgid "Administrator credentials"
+msgstr "Данные администратора"
+
+#: data/ui/admin-dialog.blp:32
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: data/ui/admin-dialog.blp:37
+msgid "Password"
+msgstr "Пароль"
+
+#: data/ui/admin-dialog.blp:41
+msgid "Enable Group Policies"
+msgstr "Включить групповые политики"
+
+#: data/ui/admin-dialog.blp:72
+msgid "Authenticate"
+msgstr "Авторизоваться"
+
+#: data/ui/window.blp:15 mobileauth/window.py:43
+msgid "Authentication"
+msgstr "Авторизация"
+
+#: data/ui/window.blp:28
+msgid "Enter the domain details, and then enter the administrator credentials."
+msgstr "Введите данные домена, а затем введите учётные данные администратора"
+
+#: data/ui/window.blp:45
+msgid "Domain"
+msgstr "Домен"
+
+#: data/ui/window.blp:49
+msgid "Workgroup"
+msgstr "Рабочая группа"
+
+#: data/ui/window.blp:53
+msgid "Hostname"
+msgstr "Имя компьютера"
+
+#: data/ui/window.blp:54
+msgid "Reset value"
+msgstr "Сбросить значение"
+
+#: data/ui/window.blp:89
+msgid "Submit"
+msgstr "Продолжить"
+
+#: mobileauth/admin_dialog.py:47 mobileauth/welcome_dialog.py:34
+msgid "Admin Data"
+msgstr "Данные администратора"
+
+#: mobileauth/admin_dialog.py:84
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+#: mobileauth/admin_dialog.py:87
+msgid "An unknown error occurred"
+msgstr "Произошла неизвестная ошибка"
+
+#: mobileauth/admin_dialog.py:90
+msgid "D-Bus Error: {}"
+msgstr "Ошибка D-Bus: {}"
+
+#: mobileauth/admin_dialog.py:102
+msgid "Error"
+msgstr "Ошибка"
+
+#: mobileauth/admin_dialog.py:105
+msgid "Ok"
+msgstr "Ок"
+
+#: mobileauth/welcome_dialog.py:36
+msgid "Welcome to {}"
+msgstr "Добро пожаловать в {}"
+
+#: mobileauth/window.py:73
+msgid "Please fill in all fields."
+msgstr "Пожалуйста, заполните все поля."
+
+#: mobileauth/window.py:92
+msgid "Please wait..."
+msgstr "Пожалуйста, подождите..."
+
+#: mobileauth/window.py:104
+msgid "Operation in progress..."
+msgstr "Выполняется операция..."
+
+#: mobileauth/window.py:118
+msgid "Result"
+msgstr "Результат"

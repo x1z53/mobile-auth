@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mobile-auth package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: mobile-auth\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-17 20:02+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/io.guthub.SokolovValy.MobileAuth.desktop.in:4
+#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:3
+#: mobileauth/application.py:46 mobileauth/window.py:137
+msgid "Mobile Auth"
+msgstr ""
+
+#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:18
+#: data/ui/window.blp:27
+msgid "Application for entering the device into the domain"
+msgstr ""
+
+#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:25
+msgid "Valentin Sokolov"
+msgstr ""
+
+#: data/ui/admin-dialog.blp:13
+msgid "Administrator credentials"
+msgstr ""
+
+#: data/ui/admin-dialog.blp:32
+msgid "Username"
+msgstr ""
+
+#: data/ui/admin-dialog.blp:37
+msgid "Password"
+msgstr ""
+
+#: data/ui/admin-dialog.blp:41
+msgid "Enable Group Policies"
+msgstr ""
+
+#: data/ui/admin-dialog.blp:72
+msgid "Authenticate"
+msgstr ""
+
+#: data/ui/window.blp:15 mobileauth/window.py:43
+msgid "Authentication"
+msgstr ""
+
+#: data/ui/window.blp:28
+msgid "Enter the domain details, and then enter the administrator credentials."
+msgstr ""
+
+#: data/ui/window.blp:45
+msgid "Domain"
+msgstr ""
+
+#: data/ui/window.blp:49
+msgid "Workgroup"
+msgstr ""
+
+#: data/ui/window.blp:53
+msgid "Hostname"
+msgstr ""
+
+#: data/ui/window.blp:54
+msgid "Reset value"
+msgstr ""
+
+#: data/ui/window.blp:89
+msgid "Submit"
+msgstr ""
+
+#: mobileauth/admin_dialog.py:47 mobileauth/welcome_dialog.py:34
+msgid "Admin Data"
+msgstr ""
+
+#: mobileauth/admin_dialog.py:84
+msgid "Unknown error"
+msgstr ""
+
+#: mobileauth/admin_dialog.py:87
+msgid "An unknown error occurred"
+msgstr ""
+
+#: mobileauth/admin_dialog.py:90
+msgid "D-Bus Error: {}"
+msgstr ""
+
+#: mobileauth/admin_dialog.py:102
+msgid "Error"
+msgstr ""
+
+#: mobileauth/admin_dialog.py:105
+msgid "Ok"
+msgstr ""
+
+#: mobileauth/welcome_dialog.py:36
+msgid "Welcome to {}"
+msgstr ""
+
+#: mobileauth/window.py:73
+msgid "Please fill in all fields."
+msgstr ""
+
+#: mobileauth/window.py:92
+msgid "Please wait..."
+msgstr ""
+
+#: mobileauth/window.py:104
+msgid "Operation in progress..."
+msgstr ""
+
+#: mobileauth/window.py:118
+msgid "Result"
+msgstr ""
