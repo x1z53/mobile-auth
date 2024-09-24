@@ -1,5 +1,5 @@
-data/io.guthub.SokolovValy.MobileAuth.desktop.in
-data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in
+data/io.github.SokolovValy.MobileAuth.desktop.in
+data/io.github.SokolovValy.MobileAuth.metainfo.xml.in
 data/ui/admin-dialog.blp
 data/ui/window.blp
 mobileauth/admin_dialog.py
