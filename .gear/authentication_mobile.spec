@@ -1,4 +1,6 @@
-Name: authentication_mobile
+%define app_id io.github.SokolovValy.MobileAuth
+
+Name: mobile-auth
 Version: 0.1.1
 Release: alt1
 
@@ -8,11 +10,15 @@ Group: System/Configuration/Other
 Url: https://github.com/SokolovValy/alt-mobile-auth
 BuildArch: noarch
 
+BuildRequires(pre): rpm-macros-meson
+BuildRequires: meson
 BuildRequires: rpm-build-python3
 BuildRequires: rpm-macros-alterator
-Requires: libgtk+3-devel
+BuildRequires: libgtk4-devel
+BuildRequires: libadwaita-devel
+BuildRequires: python3-module-pygobject3-devel
+BuildRequires: /usr/bin/appstreamcli desktop-file-utils blueprint-compiler
 Requires: alterator-auth
-Requires: python3-module-pygobject3
 Requires: alterator-manager
 Requires: alterator-module-executor
 Requires: python3
@@ -25,35 +31,22 @@ Alt Mobile domain input tool
 %prep
 %setup -q
 
+%build
+%meson
+%meson_build
+
 %install
-mkdir -p %buildroot%python3_sitelibdir/%name/
-cp -r %{name}.py %buildroot%python3_sitelibdir/%name
+%meson_install
+%find_lang %name
 
-mkdir -p %buildroot%_alterator_datadir/backends/system/
-install -Dm0644 %{name}.backend %buildroot%_alterator_datadir/backends/system
-
-mkdir -p %buildroot%_datadir/polkit-1/actions/
-install -Dm0644 ru.basealt.alterator.authentication_mobile1.policy %buildroot%_datadir/polkit-1/actions
-
-mkdir -p %buildroot%_bindir/
-
-ln -s %python3_sitelibdir/%name/%{name}.py \
-         %buildroot%_bindir/%{name}.py
-
-mkdir -p %buildroot%_datadir/applications/
-install -Dm644 Mobile_Auth.desktop %buildroot%_datadir/applications
-
-mkdir -p %buildroot%_iconsdir/hicolor/242x242/apps/
-install -Dm644 mobile_auth.svg %buildroot%_datadir/icons/hicolor/242x242/apps
-
-%files
-%python3_sitelibdir/%name/%name.py
-%_bindir/%{name}.py
-%_alterator_datadir/backends/system/%{name}.backend
+%files -f %name.lang
+%_bindir/%name
+%_datadir/metainfo/%app_id.metainfo.xml
+%_alterator_datadir/backends/system/authentication_mobile.backend
 %_datadir/polkit-1/actions/ru.basealt.alterator.authentication_mobile1.policy
-%_desktopdir/Mobile_Auth.desktop
-%_iconsdir/hicolor/*/*/*.svg
-
+%_desktopdir/%app_id.desktop
+%_iconsdir/hicolor/*/apps/*.svg
+%_datadir/locale/*/LC_MESSAGES/%name.mo
 
 
 %changelog
@@ -62,4 +55,3 @@ install -Dm644 mobile_auth.svg %buildroot%_datadir/icons/hicolor/242x242/apps
 
 * Wed Sep 04 2024 Valentin Sokolov <sova@altlinux.org> 0.1.0-alt1
 - Initial build for Sisyphus
-
