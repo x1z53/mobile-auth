@@ -14,7 +14,7 @@ if not py_installation.found()
     error('No valid python3 binary found')
 endif
 
-APPLICATION_ID = 'io.guthub.SokolovValy.MobileAuth'
+APPLICATION_ID = 'io.github.SokolovValy.MobileAuth'
 PYTHON_DIR = py_installation.get_path('purelib')
 DATA_DIR = join_paths(get_option('prefix'), get_option('datadir'))
 PKGDATA_DIR = join_paths(DATA_DIR, APPLICATION_ID)

@@ -2,4 +2,4 @@
 Type=Application
 Name=Mobile Auth
 Exec=mobile-auth %U
-Icon=io.guthub.SokolovValy.MobileAuth
+Icon=io.github.SokolovValy.MobileAuth

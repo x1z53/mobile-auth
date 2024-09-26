@@ -6,18 +6,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.guthub.SokolovValy.MobileAuth.desktop.in:4
-#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:3
+#: data/io.github.SokolovValy.MobileAuth.desktop.in:4
+#: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:3
 #: mobileauth/application.py:46 mobileauth/window.py:137
 msgid "Mobile Auth"
 msgstr ""
 
-#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:18
+#: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:18
 #: data/ui/window.blp:27
 msgid "Application for entering the device into the domain"
 msgstr "Приложение для авторизации в домене"
 
-#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:25
+#: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:25
 msgid "Valentin Sokolov"
 msgstr "Valentin Sokolov"
 
