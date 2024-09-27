@@ -79,7 +79,7 @@ class AdminDialog(Adw.Dialog):
             stdout_output, stderr_output, return_code = response
 
             if return_code == 0:
-                GLib.idle_add(success)
+                GLib.idle_add(self.success)
             elif return_code == 1:
                 error_message = "\n".join(stderr_output) if stderr_output else _("Unknown error")
                 GLib.idle_add(self.show_message, error_message)

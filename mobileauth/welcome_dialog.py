@@ -29,8 +29,13 @@ class WelcomeDialog(Adw.Dialog):
     __gtype_name__ = "MobileAuthWelcomeDialog"
 
     status_page:Adw.StatusPage = Gtk.Template.Child()
+    ok_button:Gtk.Button = Gtk.Template.Child()
 
     def __init__(self, domain_name):
         super().__init__(title=_("Admin Data"))
 
-        status_page.props.title = _("Welcome to {}").format(domain_name)
+        self.status_page.props.title = _("Welcome to {}").format(domain_name)
+        self.ok_button.connect("clicked", self.on_ok_button_clicked)
+        
+    def on_ok_button_clicked(self, button):
+        self.close()
