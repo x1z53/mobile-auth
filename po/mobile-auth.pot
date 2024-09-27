@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile-auth\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 17:37+0300\n"
+"POT-Creation-Date: 2024-09-27 17:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,7 +93,8 @@ msgid "An unknown error occurred"
 msgstr ""
 
 #: mobileauth/admin_dialog.py:90
-msgid "D-Bus Error: {}"
+#, python-format
+msgid "D-Bus Error: %s"
 msgstr ""
 
 #: mobileauth/admin_dialog.py:102
@@ -105,7 +106,8 @@ msgid "Ok"
 msgstr ""
 
 #: mobileauth/welcome_dialog.py:37
-msgid "Welcome to {}"
+#, python-format
+msgid "Welcome to %s"
 msgstr ""
 
 #: mobileauth/window.py:73

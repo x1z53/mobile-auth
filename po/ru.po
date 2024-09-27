@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 17:37+0300\n"
+"POT-Creation-Date: 2024-09-27 17:48+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -88,8 +88,9 @@ msgid "An unknown error occurred"
 msgstr "Произошла неизвестная ошибка"
 
 #: mobileauth/admin_dialog.py:90
-msgid "D-Bus Error: {}"
-msgstr "Ошибка D-Bus: {}"
+#, python-format
+msgid "D-Bus Error: %s"
+msgstr "Ошибка D-Bus: %s"
 
 #: mobileauth/admin_dialog.py:102
 msgid "Error"
@@ -100,8 +101,9 @@ msgid "Ok"
 msgstr "Ок"
 
 #: mobileauth/welcome_dialog.py:37
-msgid "Welcome to {}"
-msgstr "Добро пожаловать в {}"
+#, python-format
+msgid "Welcome to %s"
+msgstr "Добро пожаловать в %s"
 
 #: mobileauth/window.py:73
 msgid "Please fill in all fields."
