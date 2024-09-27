@@ -93,9 +93,9 @@ class AdminDialog(Adw.Dialog):
             GLib.idle_add(self.stop_loading)
 
     def success(self):
+        self.force_close()
         dialog = WelcomeDialog(self._domain)
-        dialog.present()
-        self.close()
+        dialog.present(self)
 
     def show_message(self, message):
         dialog = Adw.AlertDialog(
