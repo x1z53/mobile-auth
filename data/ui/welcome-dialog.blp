@@ -2,6 +2,8 @@ using Gtk 4.0;
 using Adw 1;
 
 template $MobileAuthWelcomeDialog: Adw.Dialog {
+  content-width: 300;
+
   Adw.ToolbarView {
     [top]
     Adw.HeaderBar {
@@ -10,6 +12,15 @@ template $MobileAuthWelcomeDialog: Adw.Dialog {
 
     content: Adw.StatusPage status_page {
       icon-name: "emblem-ok-symbolic";
+
+      Button ok_button {
+        styles [
+          "pill",
+          "suggested-action"
+        ]
+
+        label: _("Ok");
+      }
     };
   }
 }
