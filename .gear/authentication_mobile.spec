@@ -36,6 +36,12 @@ Alt Mobile domain input tool
 %meson_build
 
 %install
+
+mkdir -p \
+	%buildroot%python3_sitelibdir/
+cp -r mobileauth \
+	%buildroot%python3_sitelibdir/
+
 %meson_install
 %find_lang %name
 
@@ -47,6 +53,8 @@ Alt Mobile domain input tool
 %_desktopdir/%app_id.desktop
 %_iconsdir/hicolor/*/apps/*.svg
 %_datadir/locale/*/LC_MESSAGES/%name.mo
+%python3_sitelibdir/mobileauth
+%_datadir/%app_id/%app_id.gresource
 
 
 %changelog
