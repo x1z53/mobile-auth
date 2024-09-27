@@ -87,7 +87,7 @@ class AdminDialog(Adw.Dialog):
                 GLib.idle_add(self.show_message, _("An unknown error occurred"))
 
         except dbus.DBusException as e:
-            GLib.idle_add(self.show_message, _("D-Bus Error: {}").format(str(e)))
+            GLib.idle_add(self.show_message, _("D-Bus Error: %s") % str(e))
 
         finally:
             GLib.idle_add(self.stop_loading)
