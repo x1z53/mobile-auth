@@ -1,10 +1,16 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 20:02+0300\n"
-"Language: ru-RU\n"
+"POT-Creation-Date: 2024-09-27 17:48+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/io.github.SokolovValy.MobileAuth.desktop.in:4
 #: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:3
@@ -47,7 +53,7 @@ msgstr "Авторизация"
 
 #: data/ui/window.blp:28
 msgid "Enter the domain details, and then enter the administrator credentials."
-msgstr "Введите данные домена, а затем введите учётные данные администратора"
+msgstr "Введите данные домена, а затем введите учётные данные администратора."
 
 #: data/ui/window.blp:45
 msgid "Domain"
@@ -69,7 +75,7 @@ msgstr "Сбросить значение"
 msgid "Submit"
 msgstr "Продолжить"
 
-#: mobileauth/admin_dialog.py:47 mobileauth/welcome_dialog.py:34
+#: mobileauth/admin_dialog.py:47 mobileauth/welcome_dialog.py:35
 msgid "Admin Data"
 msgstr "Данные администратора"
 
@@ -82,8 +88,9 @@ msgid "An unknown error occurred"
 msgstr "Произошла неизвестная ошибка"
 
 #: mobileauth/admin_dialog.py:90
-msgid "D-Bus Error: {}"
-msgstr "Ошибка D-Bus: {}"
+#, python-format
+msgid "D-Bus Error: %s"
+msgstr "Ошибка D-Bus: %s"
 
 #: mobileauth/admin_dialog.py:102
 msgid "Error"
@@ -93,9 +100,10 @@ msgstr "Ошибка"
 msgid "Ok"
 msgstr "Ок"
 
-#: mobileauth/welcome_dialog.py:36
-msgid "Welcome to {}"
-msgstr "Добро пожаловать в {}"
+#: mobileauth/welcome_dialog.py:37
+#, python-format
+msgid "Welcome to %s"
+msgstr "Добро пожаловать в %s"
 
 #: mobileauth/window.py:73
 msgid "Please fill in all fields."

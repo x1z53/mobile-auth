@@ -34,7 +34,7 @@ class WelcomeDialog(Adw.Dialog):
     def __init__(self, domain_name):
         super().__init__(title=_("Admin Data"))
 
-        self.status_page.props.title = _("Welcome to {}").format(domain_name)
+        self.status_page.props.title = _("Welcome to %s") % domain_name
         self.ok_button.connect("clicked", self.on_ok_button_clicked)
         
     def on_ok_button_clicked(self, button):

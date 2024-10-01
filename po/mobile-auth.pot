@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile-auth\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-17 20:02+0300\n"
+"POT-Creation-Date: 2024-09-27 17:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.guthub.SokolovValy.MobileAuth.desktop.in:4
-#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:3
+#: data/io.github.SokolovValy.MobileAuth.desktop.in:4
+#: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:3
 #: mobileauth/application.py:46 mobileauth/window.py:137
 msgid "Mobile Auth"
 msgstr ""
 
-#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:18
+#: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:18
 #: data/ui/window.blp:27
 msgid "Application for entering the device into the domain"
 msgstr ""
 
-#: data/io.guthub.SokolovValy.MobileAuth.metainfo.xml.in:25
+#: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:25
 msgid "Valentin Sokolov"
 msgstr ""
 
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: mobileauth/admin_dialog.py:47 mobileauth/welcome_dialog.py:34
+#: mobileauth/admin_dialog.py:47 mobileauth/welcome_dialog.py:35
 msgid "Admin Data"
 msgstr ""
 
@@ -93,7 +93,8 @@ msgid "An unknown error occurred"
 msgstr ""
 
 #: mobileauth/admin_dialog.py:90
-msgid "D-Bus Error: {}"
+#, python-format
+msgid "D-Bus Error: %s"
 msgstr ""
 
 #: mobileauth/admin_dialog.py:102
@@ -104,8 +105,9 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: mobileauth/welcome_dialog.py:36
-msgid "Welcome to {}"
+#: mobileauth/welcome_dialog.py:37
+#, python-format
+msgid "Welcome to %s"
 msgstr ""
 
 #: mobileauth/window.py:73
