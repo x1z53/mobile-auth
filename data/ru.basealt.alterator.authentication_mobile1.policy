@@ -12,9 +12,9 @@
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
   </action>
-  <action id="ru.basealt.alterator.authentication-mobile1.In_domain">
+  <action id="ru.basealt.alterator.authentication-mobile1.Join">
     <description>Alterator Authentication dialogue</description>
-    <message>ru.basealt.alterator.altmobile1.In_domain requires authentication.</message>
+    <message>ru.basealt.alterator.altmobile1.Join requires authentication.</message>
     <defaults>
       <allow_any>auth_admin_keep</allow_any>
       <allow_inactive>auth_admin_keep</allow_inactive>
