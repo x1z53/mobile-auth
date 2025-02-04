@@ -71,8 +71,8 @@ class AdminDialog(Adw.Dialog):
         try:
             bus = dbus.SystemBus()
 
-            proxy = bus.get_object('ru.basealt.alterator', '/ru/basealt/alterator/mobile_auth')
-            interface = dbus.Interface(proxy, dbus_interface='ru.basealt.alterator.authentication_mobile')
+            proxy = bus.get_object('org.altlinux.alterator', '/org/altlinux/alterator/mobile_auth')
+            interface = dbus.Interface(proxy, dbus_interface='org.altlinux.alterator.authentication_mobile')
 
             response = interface.Join(command, timeout=120)
 

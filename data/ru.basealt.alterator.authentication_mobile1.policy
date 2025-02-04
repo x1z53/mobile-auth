@@ -3,18 +3,18 @@
 "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
 "https://specifications.freedesktop.org/PolicyKit/1.0/policyconfig.dtd">
 <policyconfig>
-  <action id="ru.basealt.alterator.authentication-mobile1">
+  <action id="org.altlinux.alterator.authentication-mobile1">
     <description>Alterator Authentication dialogue</description>
-    <message>ru.basealt.alterator.altmobile1 requires authentication.</message>
+    <message>org.altlinux.alterator.altmobile1 requires authentication.</message>
     <defaults>
       <allow_any>auth_admin_keep</allow_any>
       <allow_inactive>auth_admin_keep</allow_inactive>
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
   </action>
-  <action id="ru.basealt.alterator.authentication-mobile1.Join">
+  <action id="org.altlinux.alterator.authentication-mobile1.Join">
     <description>Alterator Authentication dialogue</description>
-    <message>ru.basealt.alterator.altmobile1.Join requires authentication.</message>
+    <message>org.altlinux.alterator.altmobile1.Join requires authentication.</message>
     <defaults>
       <allow_any>auth_admin_keep</allow_any>
       <allow_inactive>auth_admin_keep</allow_inactive>

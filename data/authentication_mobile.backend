@@ -2,8 +2,8 @@
 Type = Backend
 Module = executor
 Name = mobile_auth
-Interface = ru.basealt.alterator.authentication_mobile
-action_id = ru.basealt.alterator.authentication-mobile1
+Interface = org.altlinux.alterator.authentication_mobile
+action_id = org.altlinux.alterator.authentication-mobile1
 
 [Join]
 execute = /usr/sbin/system-auth {param}
