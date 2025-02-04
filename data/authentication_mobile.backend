@@ -1,12 +1,11 @@
-[Alterator Entry]
-Type = Backend
-Module = executor
-Name = mobile_auth
-Interface = org.altlinux.alterator.authentication_mobile
-action_id = org.altlinux.alterator.authentication-mobile1
+type = "Backend"
+module = "executor"
+name = "mobile_auth"
+interface = "org.altlinux.alterator.authentication_mobile"
+action_id = "org.altlinux.alterator.authentication-mobile1"
 
-[Join]
-execute = /usr/sbin/system-auth {param}
-stdout_strings = enabled
-stderr_strings = enabled
-action_id = Join
+[methods.Join]
+execute = "/usr/sbin/system-auth {param}"
+stdout_strings = true
+stderr_strings = true
+action_id = "Join"
