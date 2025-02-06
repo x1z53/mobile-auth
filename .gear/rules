@@ -1,2 +1,2 @@
 tar: .
-spec: .gear/authentication_mobile.spec
+spec: .gear/mobile-auth.spec

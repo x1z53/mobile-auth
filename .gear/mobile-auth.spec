@@ -48,8 +48,8 @@ cp -r mobileauth \
 %files -f %name.lang
 %_bindir/%name
 %_datadir/metainfo/%app_id.metainfo.xml
-%_alterator_datadir/backends/system/authentication_mobile.backend
-%_datadir/polkit-1/actions/ru.basealt.alterator.authentication_mobile1.policy
+%_alterator_datadir/backends/system/mobile_auth.backend
+%_datadir/polkit-1/actions/ru.basealt.alterator.mobile-auth1.policy
 %_desktopdir/%app_id.desktop
 %_iconsdir/hicolor/*/apps/*.svg
 %_datadir/locale/*/LC_MESSAGES/%name.mo
