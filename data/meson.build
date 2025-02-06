@@ -39,7 +39,7 @@ install_data('org.altlinux.alterator.mobile-auth1.policy',
   install_dir: join_paths(DATA_DIR, 'polkit-1/actions/')
 )
 
-install_data('mobile_auth.backend',
+install_data('mobile-auth.backend',
   install_dir: join_paths(DATA_DIR, 'alterator/backends/system/')
 )
 
