@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# Authentication mobile - Alt Mobile domain input tool
+# Mobile auth - Alt Mobile domain input tool
 #
 # Copyright (C) 2024 Valentin Sokolov.
 #

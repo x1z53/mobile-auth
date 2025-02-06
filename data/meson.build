@@ -35,11 +35,11 @@ if (appstreamcli.found())
   )
 endif
 
-install_data('org.altlinux.alterator.authentication_mobile1.policy',
+install_data('org.altlinux.alterator.mobile-auth1.policy',
   install_dir: join_paths(DATA_DIR, 'polkit-1/actions/')
 )
 
-install_data('authentication_mobile.backend',
+install_data('mobile_auth.backend',
   install_dir: join_paths(DATA_DIR, 'alterator/backends/system/')
 )
 

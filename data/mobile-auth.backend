@@ -1,8 +1,8 @@
 type = "Backend"
 module = "executor"
 name = "mobile_auth"
-interface = "org.altlinux.alterator.authentication_mobile"
-action_id = "org.altlinux.alterator.authentication-mobile1"
+interface = "org.altlinux.alterator.mobile_auth"
+action_id = "org.altlinux.alterator.mobile-auth1"
 
 [methods.Join]
 execute = "/usr/sbin/system-auth {param}"
