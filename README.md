@@ -8,3 +8,7 @@
   </h1>
 </div>
 <div align="center"><h4>GTK4/Python application designed for authentication of devices based on OS Alt Mobile  in Samba DC and Active Directory domains.</h4></div>
+
+<div align="center">
+  <img src="data/images/mobile-auth-preview.png" alt="Preview"/>
+</div>
