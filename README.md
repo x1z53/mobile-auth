@@ -61,3 +61,6 @@ ninja -C _build test
 ```shell
 sudo ninja uninstall -C _build
 ```
+
+## Gratitude
+Thank you [Rirusha](https://github.com/Rirusha) and [ALT Gnome](https://github.com/alt-gnome).
