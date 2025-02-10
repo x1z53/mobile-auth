@@ -24,7 +24,6 @@ PKGLIB_DIR = join_paths(get_option('prefix'), get_option('libdir'), APPLICATION_
 dependency('glib-2.0', version: '>= 2.67.1')
 dependency('gtk4', version: '>= 4.14.0')
 dependency('libadwaita-1', version: '>= 1.5')
-dependency('pygobject-3.0', version: '>= 3.47.0')
 
 subdir('data')
 subdir('po')
