@@ -12,3 +12,10 @@
 <div align="center">
   <img src="data/images/mobile-auth-preview.png" alt="Preview"/>
 </div>
+
+# Install
+### ALT Linux
+```shell
+su -
+apt-get install mobile-auth
+```
