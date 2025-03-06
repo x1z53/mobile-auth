@@ -1,5 +1,8 @@
 [Desktop Entry]
-Type=Application
 Name=Mobile Auth
+Name[ru]=Аутентификация в домене
+Type=Application
 Exec=mobile-auth %U
+Categories=GTK;GNOME;Utility
 Icon=io.github.SokolovValy.MobileAuth
+X-Purism-FormFactor=Workstation;Mobile;
