@@ -21,7 +21,7 @@ msgstr ""
 #: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:18
 #: data/ui/window.blp:27
 msgid "Application for entering the device into the domain"
-msgstr "Приложение для авторизации в домене"
+msgstr "Приложение для аутентификации в домене"
 
 #: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:25
 msgid "Valentin Sokolov"
@@ -45,11 +45,11 @@ msgstr "Включить групповые политики"
 
 #: data/ui/admin-dialog.blp:72
 msgid "Authenticate"
-msgstr "Авторизоваться"
+msgstr "Аутентифицироваться"
 
 #: data/ui/window.blp:15 mobileauth/window.py:43
 msgid "Authentication"
-msgstr "Авторизация"
+msgstr "Аутентификация"
 
 #: data/ui/window.blp:28
 msgid "Enter the domain details, and then enter the administrator credentials."
