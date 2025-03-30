@@ -1,18 +1,23 @@
+#
+# David Sultaniiazov <x1z53@alt-gnome.ru>, 2025.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 17:48+0300\n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ru_RU\n"
+"POT-Creation-Date: 2025-03-30 12:33+0300\n"
+"PO-Revision-Date: 2025-03-30 12:41+0300\n"
+"Last-Translator: David Sultaniiazov <x1z53@alt-gnome.ru>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Gtranslator 48.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: data/io.github.SokolovValy.MobileAuth.desktop.in:4
+#: data/io.github.SokolovValy.MobileAuth.desktop.in:3
 #: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:3
 #: mobileauth/application.py:46 mobileauth/window.py:137
 msgid "Mobile Auth"
@@ -21,15 +26,15 @@ msgstr ""
 #: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:18
 #: data/ui/window.blp:27
 msgid "Application for entering the device into the domain"
-msgstr "Приложение для аутентификации в домене"
+msgstr "Приложение для аутентификации устройства в домене"
 
 #: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:25
 msgid "Valentin Sokolov"
-msgstr "Valentin Sokolov"
+msgstr "Валентин Соколов"
 
 #: data/ui/admin-dialog.blp:13
 msgid "Administrator credentials"
-msgstr "Данные администратора"
+msgstr "Учётные данные администратора"
 
 #: data/ui/admin-dialog.blp:32
 msgid "Username"
@@ -46,6 +51,10 @@ msgstr "Включить групповые политики"
 #: data/ui/admin-dialog.blp:72
 msgid "Authenticate"
 msgstr "Аутентифицироваться"
+
+#: data/ui/welcome-dialog.blp:22 mobileauth/admin_dialog.py:105
+msgid "Ok"
+msgstr "Ок"
 
 #: data/ui/window.blp:15 mobileauth/window.py:43
 msgid "Authentication"
@@ -73,7 +82,7 @@ msgstr "Сбросить значение"
 
 #: data/ui/window.blp:89
 msgid "Submit"
-msgstr "Продолжить"
+msgstr "Предоставить"
 
 #: mobileauth/admin_dialog.py:47 mobileauth/welcome_dialog.py:35
 msgid "Admin Data"
@@ -96,10 +105,6 @@ msgstr "Ошибка D-Bus: %s"
 msgid "Error"
 msgstr "Ошибка"
 
-#: mobileauth/admin_dialog.py:105
-msgid "Ok"
-msgstr "Ок"
-
 #: mobileauth/welcome_dialog.py:37
 #, python-format
 msgid "Welcome to %s"
@@ -115,7 +120,7 @@ msgstr "Пожалуйста, подождите..."
 
 #: mobileauth/window.py:104
 msgid "Operation in progress..."
-msgstr "Выполняется операция..."
+msgstr "Операция выполняется..."
 
 #: mobileauth/window.py:118
 msgid "Result"

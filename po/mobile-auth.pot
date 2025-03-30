@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile-auth\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 17:48+0300\n"
+"POT-Creation-Date: 2025-03-30 12:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/io.github.SokolovValy.MobileAuth.desktop.in:4
+#: data/io.github.SokolovValy.MobileAuth.desktop.in:3
 #: data/io.github.SokolovValy.MobileAuth.metainfo.xml.in:3
 #: mobileauth/application.py:46 mobileauth/window.py:137
 msgid "Mobile Auth"
@@ -50,6 +50,10 @@ msgstr ""
 
 #: data/ui/admin-dialog.blp:72
 msgid "Authenticate"
+msgstr ""
+
+#: data/ui/welcome-dialog.blp:22 mobileauth/admin_dialog.py:105
+msgid "Ok"
 msgstr ""
 
 #: data/ui/window.blp:15 mobileauth/window.py:43
@@ -99,10 +103,6 @@ msgstr ""
 
 #: mobileauth/admin_dialog.py:102
 msgid "Error"
-msgstr ""
-
-#: mobileauth/admin_dialog.py:105
-msgid "Ok"
 msgstr ""
 
 #: mobileauth/welcome_dialog.py:37
